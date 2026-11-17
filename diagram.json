@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Control de acceso - Computación Ubicua",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 140, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "verde", "top": -30, "left": 110, "attrs": { "color": "green", "label": "ACCESO CORRECTO" } },
+    { "type": "wokwi-led", "id": "rojo", "top": -30, "left": 235, "attrs": { "color": "red", "label": "ACCESO DENEGADO" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 65, "left": 104, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 65, "left": 229, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    ["uno:8", "r1:2", "green", ["v-20", "h40"]],
+    ["r1:1", "verde:A", "green", []],
+    ["verde:C", "uno:GND.1", "black", ["v25", "h-45", "v70"]],
+    ["uno:9", "r2:2", "red", ["v-30", "h65"]],
+    ["r2:1", "rojo:A", "red", []],
+    ["rojo:C", "uno:GND.2", "black", ["v30", "h95", "v360", "h-160"]]
+  ],
+  "serialMonitor": { "display": "always", "newline": "lf", "collapse": false }
+}

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+build/*
+!build/control_acceso_wokwi.ino.hex
+!build/control_acceso_wokwi.ino.elf
+.arduino-data/
+.arduino-downloads/
+*.log
+fotos/
+circuito-wokwi.png
